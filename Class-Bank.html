@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank Account</title>
+</head>
+<body>
+    <script>
+       class BankAccount {
+        constructor(AccountNumber , AccountHolder, Balance){
+            this.AccountNumber = AccountNumber;
+            this.AccountHolder = AccountHolder;
+            this.Balance = Balance;
+        }
+
+        deposite(amount){
+            this.Balance += amount;
+            return `Your Balance is ${this.Balance}`;
+        }
+
+        Withdraw(amount){
+            if(this.Balance >= amount){
+            this.Balance -=amount;
+            return `your withdrawel amount is Rs ${amount}`;
+        }
+        }
+
+        getAccountInfo(){
+            return `your AccountNumber is ${AccountNumber}
+                    your AccountHolder is ${AccountHolder}
+                    your Balance is ${Balance}`;
+        }
+
+       }
+
+       const Person1 = new BankAccount ("457654","karthick", 1000);
+       const Person2 = new BankAccount ("828328","vasim", 4300);
+       const Person3 = new BankAccount ("797654","dinesh", 10000);
+
+
+       Person1.deposite(2000);
+       Person2.Withdraw(2000);
+       Person3.getAccountInfo;
+
+       
+    </script>
+</body>
+</html>
