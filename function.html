@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products</title>
+</head>
+<body>
+    <script>
+        function Product(name, price){
+            this.name = name;
+            this.price = price;
+        }
+            
+        Discount = function(percentage){
+            return this.price - (this.price*(percentage/100));
+        }
+
+        const Laptop1 = new Product ("Apple",230000);
+        const Laptop2 = new Product ("HP",80000);
+        const Laptop3 = new Product ("Lenovo",60000);
+
+        console.log(Laptop2.name);
+        console.log(Laptop3.price);
+        console.log(Laptop1.Discount(20));
+        
+    </script>
+</body>
+</html>
